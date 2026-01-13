@@ -1,0 +1,62 @@
+html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    position: relative
+}
+
+body {
+    margin: 0;
+    padding: 0
+}
+
+button {
+    border: none
+}
+
+html {
+    font-size: 10px
+}
+
+@media(max-width: 767px) {
+    html {
+        font-size:8.5px
+    }
+}
+
+@media(min-width: 768px) {
+    html {
+        font-size:9px
+    }
+}
+
+@media(min-width: 992px) {
+    html {
+        font-size:9.5px
+    }
+}
+
+@media(min-width: 1200px) {
+    html {
+        font-size:10px
+    }
+}
+
+
+
+/* Tablet và các thiết bị lớn hơn */
+@media (min-width: 480px) {
+    body { background-color: red !important; }
+}
+
+@media (min-width: 768px) {
+    body { background-color: yellow !important; }
+}
+
+@media (min-width: 1024px) {
+    body { background-color: green !important; }
+}
+
+@media (min-width: 1280px) {
+    body { background-color: rgb(158, 171, 158) !important; }
+}

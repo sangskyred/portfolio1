@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "Segoe UI", Arial, sans-serif;
+    ;
+}
+
+.container {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    /* Ensures it fills the screen */
+    width: 100%;
+}
+
+/* Variables for easy maintenance */
+:root {
+    --nav-bg: #ffffff;
+    --nav-text: #333;
+    --nav-accent: #0070f3;
+    --nav-height: 70px;
+}
+
+/* Base Styles */
+.navbar-container {
+    background: var(--nav-bg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    /* Keeps nav visible on scroll */
+    top: 0;
+    z-index: 1000;
+    left: 0;
+    width: 100%;
+}
+
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--nav-height);
+}
+
+.navbar-logo a {
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(to right, #6366f1, #a855f7); /* Màu tím xanh hiện đại */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+  transition: all 0.3s ease;
+}
+
+
+
+
+/* Shared List Styles */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li a {
+    text-decoration: none;
+    color: var(--nav-text);
+    padding: 10px 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+li a:hover {
+    color: var(--nav-accent);
+}
+
+.toggle-menu {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    /* Thấp hơn mobile-menu */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu {
+    margin-left: -300px;
+    position: absolute;
+    top: 0;
+    z-index: 1001;
+    left: 0;
+    width: 300px;
+    background-color: #ffffff;
+    flex-direction: column;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    height: 100vh;
+    transition: margin-left 0.3s ease;
+    /* Thêm hiệu ứng chuyển tiếp */
+}
+
+.mobile-menu.open {
+    margin-left: 0;
+}
+
+.mobile-menu ul {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Desktop Media Query */
+@media (min-width: 768px) {
+
+    .mobile-nav{
+        display: none;
+        /* Hide mobile elements on desktop */
+    }
+
+    .toggle-menu {
+        display: none;
+    }
+}
+
+
+.hero {
+    margin: 20px 4px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+    font-family: cursive;
+}
+
+.btn-gradient-blue {
+    background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+    border: none;
+    color: white;
+    transition: transform 0.2s;
+}
+
+.btn-gradient-blue:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3);
+    color: white;
+}
+
+.image-wrapper img {
+    display: inline-block;
+    /* Ensure the wrapper fits the image size */
+    border-radius: 12px;
+    /* Optional: match image rounding */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    /* Soft, modern shadow */
+    max-width: 100%;
+    width: 450px;
+    height: auto;
+}
+
+.skills {
+    margin: 20px 4px;
+}
+
+.skills.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Đảm bảo các hộp có chiều cao bằng nhau trong một hàng */
+    padding: 20px;
+    border: 1px solid #ddd;
+    /* Ví dụ để dễ nhìn */
+    border-radius: 8px;
+    background-color: aliceblue;
+}
+
+.skills .skill-item .icon {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.skills .skill-item .icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+.skills .skill-item h3 {
+    color: var(--text-main);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+
+
+
+/* --- VERTICAL RESUME SECTION (NEW) --- */
+.resume-container .nav-pills {
+    background: transparent;
+}
+
+/* Style for Vertical Tabs on the Left */
+.resume-nav-link {
+    color: var(--text-dark);
+    text-align: left;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    background: var(--bg-white);
+    box-shadow: var(--shadow-sm);
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.resume-nav-link svg {
+    margin-right: 12px;
+    color: var(--text-light);
+}
+
+.resume-nav-link:hover {
+    background-color: rgba(37, 99, 235, 0.05);
+
+}
+
+.resume-nav-link.active {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+    border-color: var(--primary-color);
+}
+
+.resume-nav-link.active svg {
+    color: white;
+}
+
+/* Accordion Styling for Resume Content */
+.accordion-button:not(.collapsed) {
+    background-color: rgba(37, 99, 235, 0.05);
+    color: var(--primary-color);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, 0.125);
+}
+
+.accordion-item {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 12px !important;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.accordion-button {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.content-education {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+}
+
+
+.contact {
+    margin: 20px 4px;
+}
+
+/* @media (max-width: 767px) {
+    body {
+        background-color: #cccc;
+    }
+} */
+
+@media (min-width: 600px) {
+    body {}
+}
+
+@media (min-width: 1024px) {
+    body {}
+}
+
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+
+    body {
+        /* background-color: rgb(190, 116, 26); */
+    }
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-info .info-item {
+    display: flex;
+    align-items: start;
+    background-color: #f0f8ff;
+    gap: 10px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+}
+
+.contact-info .info-item .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: #deffe4;
+    color: #0ea5e9;
+    transition: 0.3s;
+    flex-shrink: 0
+}
+
+svg {
+    display: block;
+}
+
+.contact-info .info-item h3 {
+    font-size: 1.2rem
+}
+
+.contact-info .social-links {
+    display: flex;
+    gap: 10px
+}
+
+.contact-info .social-links a {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8eae8;
+    color: #0ea5e9;
+    transition: 0.3s all ease-in-out;
+}
+
+.contact-info .social-links a:hover {
+    transform: translateY(-3px);
+}
+
+
+/* General Form Styling */
+.form-data {
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f8ff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.form-data form {
+    padding: 0 80px; 
+  
+}
+
+
+/* Input and Textarea Styling */
+.form-control {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    padding: 4px 2px 4px 15px;
+    background-color: #f8fafc;
+    color: #333;
+    border: 1px solid #d4d6dd;
+    box-shadow: inset 0 30px 0 0 #fff;
+    border-radius: 5px;
+    font: 14px Arial, sans-serif;
+   
+}
+
+textarea.form-control {
+    min-height: 120px
+}
+
+/* Focus State for Inputs */
+.form-control:focus {
+    border-color: none;
+    box-shadow: none;
+    outline: none
+}
+
+/* Error Message Styling */
+.form-error {
+    color: #dc3545;
+    margin-top: 4px;
+    font-size: 13px;
+    min-height: 16px;
+}
