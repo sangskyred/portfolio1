@@ -63,7 +63,7 @@ const SectionContact = () => {
     }, [formData]);
 
     return (
-        <section id="contact" className="contact row gy-3 gx-4">
+        <section id="contact" className="contact row g-0">
             <ToastContainer />
 
             <div className="section-title">

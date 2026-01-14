@@ -11,7 +11,7 @@ const Footer = () => {
     return (
         <div className="row footer" style={{ height: '100px' }}>
             <div className="col-md-12 pt-5">
-                <div className="bg-primary text-white text-center h-100 d-flex align-items-center justify-content-center">
+                <div className="bg-primary text-white text-center">
                     <p>© {date} copyright by Hoang Van Sang. All rights reserved.</p>
                 </div>
             </div>

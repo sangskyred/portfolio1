@@ -4,19 +4,19 @@ import Link from "next/link";
 
 const SectionHero = () => {
     return (
-        <section className="hero row mt-5">
-            <div className="col-sm-12 col-lg-6 order-lg-1 order-2 mt-5 mt-lg-0">
-                <div className="hero-content pe-4 pe-lg-5">
+        <section className="hero row g-0 mt-5">
+            <div className="col-sm-12 col-lg-6 order-lg-1 order-2 mt-lg-0">
+                <div className="hero-content">
                     <h1 className="hero-title">Hi, I'm <span className='highlight'>Hoang Van Sang</span></h1>
                     <h2 className="hero-subtitle">I'm a Senior Full Stack Developer</h2>
-                    <p className="hero-description">
+                    <p className="hero-description text-muted">
                         I am a Senior Full-Stack Developer with 6+ years of experience building scalable web applications using Java
                         Spring Boot, NodeJS, PostgreSQL, and frontend frameworks such as ReactJS and NextJS. I excel in designing
                         microservices, securing APIs, and optimizing backend and frontend performance.
                     </p>
-                    <div className="cta-group d-flex gap-3">
-                        <Link role="button" className="btn btn-gradient-blue btn-lg px-4 shadow-sm" href="#contact">Let's Connect</Link>
-                        <Link role="button" className="btn btn-outline-info btn-lg px-4 shadow-sm" data-bs-toggle="modal" data-bs-target="#downloadCV" href="#">Download CV</Link>
+                    <div className="hero-buttons d-flex gap-2">
+                        <Link role="button" className="btn btn-info" href="#contact">Let's Connect</Link>
+                        <Link role="button" className="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#downloadCV" href="#">Download CV</Link>
                     </div>
                     {/*<!-- Modal -->*/}
                     <div className="modal fade" id="downloadCV" tabIndex="-1" aria-labelledby="downloadCVLabel" aria-hidden="true">

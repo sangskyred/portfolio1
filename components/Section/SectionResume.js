@@ -43,11 +43,11 @@ const SectionResum = () => {
     ];
 
     return (
-        <section id="resume" className="resum row gy-4 gx-3">
+        <section id="resume" className="resum row g-0">
             <div className="section-title">
                 <h2>Resume</h2>
             </div>
-            <div className="row">
+            <div className="row g-0">
                 <div className="col-md-4 col-lg-3">
                     <div className="tab-lists">
                         <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
