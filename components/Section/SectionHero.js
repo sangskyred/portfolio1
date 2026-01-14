@@ -8,8 +8,7 @@ const SectionHero = () => {
             <div className="col-sm-12 col-lg-6 order-lg-1 order-2 mt-lg-0">
                 <div className="hero-content">
                     <h1 className="hero-title">Hi, I'm <span className='highlight'>Hoang Van Sang</span></h1>
-                    <h2 className="hero-subtitle">I'm a Senior Full Stack Developer</h2>
-                    <p className="hero-description text-muted">
+                    <p className="hero-description">
                         I am a Senior Full-Stack Developer with 6+ years of experience building scalable web applications using Java
                         Spring Boot, NodeJS, PostgreSQL, and frontend frameworks such as ReactJS and NextJS. I excel in designing
                         microservices, securing APIs, and optimizing backend and frontend performance.
