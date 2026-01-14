@@ -11,6 +11,7 @@
 :root {
   --bg-color: #ffffff;
   --text-color: #333333;
+  --text-muted: #413e3e;
   --header-bg: #ffffff;
   --nav-link-color: #333333;
   --nav-link-hover: rgba(0, 0, 0, 0.1);
@@ -20,22 +21,30 @@
   --bg-color-button: rgba(0, 0, 0, 0.1);
   --li-border-color: rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
+  
 }
 
 /* Dark Theme Variables */
 [data-theme="dark"] {
   --bg-color: #121212;
   --text-color: #f0f0f0;
+  --text-muted: #9aa7a1;
   --header-bg: #161617;
   --nav-link-color: #f0f0f0;
   --nav-link-hover: rgba(255, 255, 255, 0.1);
   --mobile-menu-bg: #1e1e1e;
   --bg-color-button: #ffffff1a;
   --li-border-color: rgba(255, 255, 255, 0.1);
+
 }
 
 html {
   font-size: .875rem;
+}
+
+body {
+  margin: 0;
+  padding: 0
 }
 
 body {
@@ -190,6 +199,7 @@ button {
   position: relative;
   display: flex;
   justify-content: center;
+  margin-right: .8rem;
 }
 
 .toggle-menu svg {
@@ -277,21 +287,26 @@ button {
   }
 }
 
-.hero-content .hero-title{
-  font-family: cursive;
+.hero-content .hero-title {
+  font-family: 'Dancing Script', cursive;
   margin-top: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.8;
+
 }
 
-.hero-content .hero-title h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  line-height: 2;
+.hero .hero-buttons {
+  font-size: 14px;
+  margin-bottom: 2rem;
 }
 
+.hero .hero-description {
+  font-size: 16px;
+  color: var(--text-muted);
+}
 
-.image-wrapper img {
-  
-} 
+.image-wrapper img {}
 
 .hero img {
   height: 100%;
@@ -300,9 +315,4 @@ button {
   object-position: center;
   display: block;
   border-radius: 1rem;
-}
-
-.hero .hero-buttons {
-  font-size: 14px;
-  margin-bottom: 2rem;
 }
