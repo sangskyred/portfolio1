@@ -8,8 +8,8 @@ export const validationContact = (name, value) => {
                 errMessage = 'Name is required.'
             } else if (value.length < 2) {
                 errMessage = 'Name must be at least 2 characters.'
-            } else if (value.length > 50) {
-                errMessage = 'Name must be no more than 50 characters.'
+            } else if (value.length > 32) {
+                errMessage = 'Name must not exceed 32 characters.'
             } else if (!/\p{L}/u.test(value)) {
                 errMessage = 'Name must contain at least one letter.'
             } else if (!/^[\p{L}\p{N}\s-]+$/u.test(value)) {
@@ -19,18 +19,20 @@ export const validationContact = (name, value) => {
         case 'email':
             if (!value.trim()) {
                 errMessage = 'Email is required.'
+            } else if (value.length > 50) {
+                errMessage = 'Email is too long. Maximum length is 50 characters.'
             } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value)) {
                 errMessage = 'Invalid email format (e.g., abc@example.com).'
             }
 
-            break;
+            break
         default:
             if (!value.trim()) {
                 errMessage = 'Message is required.'
             } else if (value.length > 1000) {
                 errMessage = 'Message cannot exceed 1000 characters.'
             }
-            break;
+            break
     }
 
     return errMessage;
