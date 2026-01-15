@@ -16,10 +16,11 @@ export default function Home() {
         <main className="main-content">
           <div className="container">
             <SectionHero />
-            <SectionSkills />
-            <SectionResum />
-            <SectionContact />
           </div>
+          <SectionSkills />
+          <SectionResum />
+          <SectionContact />
+
         </main>
         <footer>
           <div className="container">

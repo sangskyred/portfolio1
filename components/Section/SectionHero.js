@@ -14,7 +14,7 @@ const SectionHero = () => {
                         microservices, securing APIs, and optimizing backend and frontend performance.
                     </p>
                     <div className="hero-buttons d-flex gap-2">
-                        <Link role="button" className="btn btn-info" href="#contact">Let's Connect</Link>
+                        <Link role="button"  className="btn btn-info" href="#contact">Let's Connect</Link>
                         <Link role="button" className="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#downloadCV" href="#">Download CV</Link>
                     </div>
                     {/*<!-- Modal -->*/}
