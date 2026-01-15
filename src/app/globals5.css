@@ -81,7 +81,7 @@ button {
   padding-right: 1rem;
   box-sizing: border-box;
   margin: 0 auto;
-
+  overflow: hidden;
 }
 
 @media (max-width: 575px) {}
@@ -458,6 +458,8 @@ button {
   padding: 12px 10px;
   transition: border-color .2s ease-in-out;
   width: 100%;
+  /* Tăng khoảng cách để trừ hao phần feedback */
+  position: relative;
 }
 
 
@@ -470,5 +472,18 @@ textarea {
 }
 
 .invalid-feedback {
-  min-height: 40px;
+    display: block !important; /* Ghi đè display: none của Bootstrap */
+    visibility: hidden;        /* Ẩn nội dung nhưng giữ chỗ */
+    height: 5px;             /* Cố định chiều cao cụ thể */
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    font-size: 13px;
+
+}
+
+/* Hiển thị nội dung khi input có class .is-invalid */
+.form-control.is-invalid ~ .invalid-feedback {
+    visibility: visible;
+      margin-bottom: 1.5rem;
 }
