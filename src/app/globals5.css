@@ -47,17 +47,13 @@ html {
 }
 
 body {
-  margin: 0px;
-  padding: 0px
-}
-
-body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--bg-color);
-  transition: background-color 0.3s, color 0.3s;
   padding-top: 50px;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -81,8 +77,8 @@ button {
 .container {
   max-width: 100%;
   width: 100%;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
   box-sizing: border-box;
   margin: 0 auto;
 
@@ -391,10 +387,77 @@ button {
   border-radius: 12px !important;
   margin-bottom: 1rem;
   overflow: hidden;
-  background-color: red;
+  background-color: rgb(148, 141, 141);
 }
 
 .accordion-button {
   font-weight: 600;
   font-size: 1.1rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.contact-info .info-item {
+  display: flex;
+  margin: 20px 0px;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border-primary);
+  gap: 40px;
+}
+
+.contact-info .info-item p {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--text-muted);
+
+}
+
+.contact-info .info-item .icon {
+
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color-button);
+}
+
+.contact-info .info-item svg {
+
+  display: block;
+}
+
+.form-data {
+  /* background-color: #ffffff; */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+
+.form-data form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-control {
+  width: 100%;
+  display: block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  background-clip: padding-box;
+  appearance: none;
+}
+
+
+.form-control:focus {
+  outline: none;
 }

@@ -83,8 +83,8 @@ const SectionResum = () => {
                                                     aria-expanded={key === 0 ? "true" : "false"}
                                                     aria-controls={`panelsAccordion-collapse${key}`}
                                                 >
-                                                  
-                                                    {item.position} | {item.company} ({item.time})
+
+                                                    {item.company} | {item.time}
                                                 </button>
                                             </h2>
                                             <div

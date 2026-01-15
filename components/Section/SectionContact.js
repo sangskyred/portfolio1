@@ -79,8 +79,8 @@ const SectionContact = () => {
                             <div key={key} className="info-item">
                                 <div className="icon"><span>{item.icon}</span></div>
                                 <div className="detail">
-                                    <h3 className="text-secondary">{item.title}</h3>
-                                    <p className="text-muted">{item.detail}</p>
+                                    <h3>{item.title}</h3>
+                                    <p>{item.detail}</p>
                                 </div>
                             </div>
                         ))}
