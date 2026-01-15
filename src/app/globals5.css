@@ -447,17 +447,28 @@ button {
 }
 
 .form-control {
-  width: 100%;
   display: block;
-  padding: 10px 20px;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
   background-clip: padding-box;
   appearance: none;
+  font-size: 16px;
+  height: 44px;
+  padding: 12px 10px;
+  transition: border-color .2s ease-in-out;
+  width: 100%;
 }
 
 
 .form-control:focus {
   outline: none;
+}
+
+textarea {
+  outline: none;
+}
+
+.invalid-feedback {
+  min-height: 40px;
 }
