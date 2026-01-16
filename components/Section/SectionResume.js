@@ -76,11 +76,11 @@ const SectionResum = () => {
                                         <div className="accordion-item" key={key}>
                                             <h2 className="accordion-header" id={`panelsAccordion-heading${key}`}>
                                                 <button
-                                                    className={`accordion-button ${key === 0 ? '' : 'collapsed'}`}
+                                                    className={`accordion-button collapsed`}
                                                     type="button"
                                                     data-bs-toggle="collapse"
                                                     data-bs-target={`#panelsAccordion-collapse${key}`}
-                                                    aria-expanded={key === 0 ? "true" : "false"}
+                                                    aria-expanded="false"
                                                     aria-controls={`panelsAccordion-collapse${key}`}
                                                 >
 
@@ -89,7 +89,7 @@ const SectionResum = () => {
                                             </h2>
                                             <div
                                                 id={`panelsAccordion-collapse${key}`}
-                                                className={`accordion-collapse collapse ${key === 0 ? 'show' : ''}`}
+                                                className={`accordion-collapse collapse`}
                                                 aria-labelledby={`panelsAccordion-heading${key}`}
                                             >
                                                 <div className="accordion-body">

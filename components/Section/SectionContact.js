@@ -71,7 +71,7 @@ const SectionContact = () => {
             <div className="section-title">
                 <h2>Contact</h2>
             </div>
-            <div className="row g-0">
+            <div className="row g-0 gx-4">
                 {/* Phần thông tin liên hệ giữ nguyên */}
                 <div className="col-sm-12 col-md-12 col-lg-4">
                     <div className="contact-info">

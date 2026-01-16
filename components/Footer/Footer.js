@@ -9,13 +9,11 @@ const Footer = () => {
         setDate(currentYear)
     }, [])
     return (
-        <div className="row footer" style={{ height: '100px' }}>
-            <div className="col-md-12 pt-5">
-                <div className="bg-primary text-white text-center">
-                    <p>© {date} copyright by Hoang Van Sang. All rights reserved.</p>
-                </div>
+       <div className="container">
+            <div className="row">
+                <p>© {date} copyright by Hoang Van Sang.</p>
             </div>
-        </div>
+       </div>
     )
 }
 

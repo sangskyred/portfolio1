@@ -10,7 +10,7 @@ const SectionHero = () => {
                     <h1 className="hero-title">Hi, I'm <span className='highlight'>Hoang Van Sang</span></h1>
                     <h3 className="hero-subtitle">Senior Full-Stack Developer</h3>
                     <p className="hero-description">
-                        I am a  with 6+ years of experience building scalable web applications using Java
+                        I have over 6 years of experience building scalable web applications using Java
                         Spring Boot, NodeJS, PostgreSQL, and frontend frameworks such as ReactJS and NextJS. I excel in designing
                         microservices, securing APIs, and optimizing backend and frontend performance.
                     </p>
