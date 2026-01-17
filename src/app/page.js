@@ -1,7 +1,7 @@
 
 import SectionHero from "../../components/Section/SectionHero";
 import SectionSkills from "../../components/Section/SectionSkills";
-import SectionResum from "../../components/Section/SectionResume";
+import SectionResum from "../../components/Section/SectionResume2";
 import SectionContact from "../../components/Section/SectionContact";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";

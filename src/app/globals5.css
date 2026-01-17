@@ -46,9 +46,8 @@
   --card-background: rgba(255, 255, 255, 0.04);
   --form-control-background-color: #27272a;
   --form-control-color: white;
-  ;
   --form-control-background-focus: #27272a;
-  ;
+
 }
 
 html {
@@ -330,79 +329,277 @@ button {
 .resume {
   padding: 40px 0;
 }
-
-.tab-content {
-
-  /* padding-top: 60px; */
+/* Container chính */
+.tabs-container {
+    background: var(--bg-color);
+    border-radius: 12px;
+    padding: 20px;
 }
 
-.nav .nav-link {
-  /* display: flex;
-  flex-direction: column;
-  gap: 20px; */
+/* 1. Thiết kế Tab List (Bên trái) */
+.tabs-list {
+    border-right: 2px solid #f0f0f0;
+    padding-right: 10px;
 }
 
-.tab-lists .nav {
-  gap: 20px;
-  margin-bottom: 40px;
+.tab-trigger {
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 12px 20px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #6c757d;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
 }
 
-.nav-pills .nav-link {
-  background-color: #ececec;
-  box-shadow: var(--shadow);
-  color: #1e1e1e;
+.tab-trigger:hover {
+    background: #f8f9fa;
+    color: #007bff;
 }
 
-.tab-lists .nav-link.resume-nav-link {
-  padding: 1rem;
-  font-size: 18px;
-  font-weight: 600;
-  width: 100%;
-  min-width: calc(100% - 15px);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: 60px;
-
+/* Trạng thái Active cho Tab */
+.tab-trigger.active {
+    background: #e7f1ff;
+    color: #007bff;
+    font-weight: 600;
+    
 }
 
-
-.tab-lists svg {
-  display: block;
-  margin-right: 1rem;
-  vertical-align: middle;
-  color: inherit;
+/* Đường kẻ xanh dọc khi tab active (tùy chọn) */
+.tab-trigger.active::after {
+    content: "";
+    position: absolute;
+    right: -12px;
+    top: 25%;
+    height: 50%;
+    width: 4px;
+    background: #007bff;
+    border-radius: 4px;
 }
 
-
-/* 
-.accordion-body {
-  background-color: inherit;
-}
-
-.accordion-button:not(.collapsed) {
-  background-color: rgba(37, 99, 235, 0.05);
-
-  box-shadow: none;
-}
-
-.accordion-button:focus {
-  box-shadow: none;
-  border-color: rgba(0, 0, 0, 0.125);
+/* 2. Thiết kế Accordion (Bên phải) */
+/* .accordion-container {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .accordion-item {
-  border: 1px solid rgba(0, 0, 0, 0.05);
-
-
-  overflow: hidden;
-  background-color: rgb(148, 141, 141);
+    border-bottom: 1px solid #e9ecef;
 }
 
-.accordion-button {
-  font-weight: 600;
-  font-size: 1.1rem;
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header button {
+    width: 100%;
+    padding: 18px 24px;
+    background: #fff;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.accordion-header button:hover {
+    background: #fafafa;
+}
+
+.accordion-header .title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
 } */
+
+/* Nội dung bên trong Accordion */
+/* .accordion-content-inner {
+    padding: 0 24px 20px 24px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.accordion-content-inner .time {
+    color: #007bff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.accordion-content-inner ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.accordion-content-inner li {
+    margin-bottom: 8px;
+} */
+
+/* 3. Phần Education (Tab thứ 2) */
+.content-education {
+    padding: 10px;
+}
+
+.content-education h3 {
+    color: #333;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .tabs-list {
+        border-right: none;
+        border-bottom: 2px solid #f0f0f0;
+        flex-direction: row !important;
+        overflow-x: auto;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .tab-trigger {
+        white-space: nowrap;
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+
+    .tab-trigger.active::after {
+        display: none; 
+    }
+}
+
+
+
+
+
+/* Container của từng item */
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Header & Button */
+.accordion-header button {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-color);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  user-select: none
+}
+
+.header-info {
+  text-align: left;
+  display: flex;
+}
+
+.accordion-header .title {
+  display: block;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Hiệu ứng xoay icon */
+/* Định nghĩa biểu tượng +/- bằng CSS */
+.icon-toggle {
+  display: inline-flex;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  flex-shrink: 0;
+  /* Ngăn icon bị bóp méo */
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+/* Thanh ngang (Dấu -) */
+.icon-toggle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-color, #333);
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+/* Thanh dọc (Dấu +) */
+.icon-toggle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: var(--text-color, #333);
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+}
+
+/* KHI MỞ: Xoay thanh dọc để ẩn đi */
+.accordion-item .active .icon-toggle::after {
+  transform: translateX(-50%) rotate(90deg);
+  opacity: 0;
+}
+
+/* Nếu bạn muốn dấu trừ (-) cũng xoay nhẹ cho đẹp */
+.accordion-item .active .icon-toggle::before {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* KỸ THUẬT QUAN TRỌNG: Animation mượt mà */
+.accordion-collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  /* Mặc định ẩn bằng cách ép hàng về 0 */
+  transition: grid-template-rows 0.4s ease-out;
+  /* Thời gian trượt */
+  overflow: hidden;
+}
+
+.accordion-collapse.show {
+  grid-template-rows: 1fr;
+  /* Mở rộng hàng dựa trên nội dung bên trong */
+}
+
+/* Nội dung bên trong phải nằm trong một div con để grid tính toán chiều cao */
+.accordion-content-inner {
+  min-height: 0;
+  padding: 0 15px;
+}
+
+.accordion-content-inner .time {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.accordion-content-inner ul {
+  padding-left: 20px;
+}
+
+.accordion-content-inner li {
+  margin-bottom: 8px;
+}
+
+
+
 
 /* CSS Variables cho chế độ sáng/tối */
 
@@ -473,18 +670,12 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
-  background: #e9ecef;
-  border-radius: 50%;
-  color: #1244a9;
+  background-color: transparent;
+  border: none;
+  color: #4c56d2;
   transition: all 0.3s;
 }
 
-.social-links a:hover {
-  background: #dee2e6;
-  color: #212529;
-}
 
 /* Form Styling */
 .form-data {
@@ -513,6 +704,7 @@ button {
   width: 100%;
   background-color: var(--form-control-background-color);
   color: var(--text-secondary);
+  z-index: 100;
 }
 
 .form-control:focus {
@@ -521,7 +713,8 @@ button {
 }
 
 .form-control::placeholder {
-  color: var(--text-muted)
+  color: var(--text-muted);
+  z-index: 2;
 }
 
 textarea.form-control {
